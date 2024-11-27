@@ -73,14 +73,6 @@ impl Machine {
         None
     }
 
-    // Checks is the data pointer is in a negative range
-    fn check_negative(&mut self) -> bool {
-        if self.negative != 0 {
-            return true;
-        }
-        false
-    }
-
     // This pretty prints the memory in a similar format as memory dumps
     // address | values in decimal | values in ascii representation, NUL is '.'
     fn pretty_print_memory(&self) {
@@ -127,7 +119,7 @@ impl Machine {
             if !matches!(
                 Command::from(command),
                 Command::IncrementPointer | Command::DecrementPointer
-            ) && self.check_negative()
+            ) && (self.negative != 0)
             {
                 self.instruction_pointer += 1;
                 continue;
