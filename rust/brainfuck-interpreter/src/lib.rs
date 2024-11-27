@@ -59,7 +59,6 @@ impl Machine {
     fn find_begin_loop(&self) -> Option<usize> {
         let mut opened_loops = 1;
         for idx in (0..(self.instruction_pointer)).rev() {
-            // print!("{}", self.code.chars().nth(idx).unwrap());
             match Command::from(self.code.chars().nth(idx).unwrap()) {
                 Command::BeginLoop => opened_loops -= 1,
                 Command::EndLoop => opened_loops += 1,
