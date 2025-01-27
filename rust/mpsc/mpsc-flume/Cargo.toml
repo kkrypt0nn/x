@@ -1,0 +1,7 @@
+[package]
+name = "mpsc-flume"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+flume = "0.11.0"

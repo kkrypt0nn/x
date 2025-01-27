@@ -1,0 +1,8 @@
+[package]
+name = "keyring-test"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+keyring = { version = "3.6.1", features = ["apple-native"] }
+rand = "0.8.5"

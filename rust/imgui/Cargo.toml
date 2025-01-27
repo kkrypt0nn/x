@@ -1,0 +1,10 @@
+[package]
+name = "imgui-test"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+imgui = "0.12.0"
+imgui-glow-renderer = "0.13.0"
+imgui-sdl2-support = "0.13.0"
+sdl2 = "0.37.0"
