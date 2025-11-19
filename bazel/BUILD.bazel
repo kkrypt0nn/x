@@ -1,0 +1,7 @@
+filegroup(
+    name = "all_rust",
+    srcs = [
+        "//one:crate_one",
+        "//two:crate_two",
+    ],
+)
